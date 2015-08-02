@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/javabase/javabase.iml" filepath="$PROJECT_DIR$/javabase/javabase.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leetcode/leetcode.iml" filepath="$PROJECT_DIR$/leetcode/leetcode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leetcode/src/main/main.iml" filepath="$PROJECT_DIR$/leetcode/src/main/main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/main/main1.iml" filepath="$PROJECT_DIR$/src/main/main1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javabase/src/main/main2.iml" filepath="$PROJECT_DIR$/javabase/src/main/main2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/practice.iml" filepath="$PROJECT_DIR$/practice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javabase/src/test/test.iml" filepath="$PROJECT_DIR$/javabase/src/test/test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leetcode/src/test/test1.iml" filepath="$PROJECT_DIR$/leetcode/src/test/test1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/test/test2.iml" filepath="$PROJECT_DIR$/src/test/test2.iml" />
+    </modules>
+  </component>
+</project>
