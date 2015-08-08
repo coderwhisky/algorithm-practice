@@ -1,4 +1,4 @@
-package org.buaa.nlp.cj.baseStructure;
+package org.buaa.nlp.cj.baseAlgorithm;
 
 import java.util.ArrayList;
 import java.util.List;

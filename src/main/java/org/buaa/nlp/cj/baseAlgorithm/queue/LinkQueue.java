@@ -1,4 +1,4 @@
-package org.buaa.nlp.cj.baseStructure.queue;
+package org.buaa.nlp.cj.baseAlgorithm.queue;
 
 import java.io.Serializable;
 

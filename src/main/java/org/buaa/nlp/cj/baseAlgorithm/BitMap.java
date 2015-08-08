@@ -1,6 +1,4 @@
-package org.buaa.nlp.cj.baseAlgorithm.sort;
-
-import java.util.BitSet;
+package org.buaa.nlp.cj.baseAlgorithm;
 
 /**
  * Created by I320592 on 7/31/2015.
