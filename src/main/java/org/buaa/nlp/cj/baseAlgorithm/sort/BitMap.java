@@ -1,4 +1,4 @@
-package org.buaa.nlp.cj.sort;
+package org.buaa.nlp.cj.baseAlgorithm.sort;
 
 /**
  * Created by I320592 on 7/31/2015.
