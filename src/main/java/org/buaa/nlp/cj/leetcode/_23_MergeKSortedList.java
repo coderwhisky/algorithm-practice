@@ -7,25 +7,25 @@ import java.util.*;
  */
 public class _23_MergeKSortedList {
 
-    public org.buaa.nlp.cj.ListNode mergeKLists2(org.buaa.nlp.cj.ListNode[] lists) {
-        PriorityQueue<org.buaa.nlp.cj.ListNode> heap = new PriorityQueue<org.buaa.nlp.cj.ListNode>(10,new Comparator<org.buaa.nlp.cj.ListNode>() {
+    public ListNode mergeKLists2(ListNode[] lists) {
+        PriorityQueue<ListNode> heap = new PriorityQueue<ListNode>(10,new Comparator<ListNode>() {
             @Override
-            public int compare(org.buaa.nlp.cj.ListNode o1, org.buaa.nlp.cj.ListNode o2) {
+            public int compare(ListNode o1, ListNode o2) {
                 return o1.val - o2.val;
             }
         });
 
         for (int i = 0; i < lists.length; i++) {
-            org.buaa.nlp.cj.ListNode node = lists[i];
+            ListNode node = lists[i];
             if (node != null)
                 heap.offer(lists[i]);
         }
 
-        org.buaa.nlp.cj.ListNode head = null;
-        org.buaa.nlp.cj.ListNode pre = head;
+        ListNode head = null;
+        ListNode pre = head;
 
         while (heap.size() > 0) {
-            org.buaa.nlp.cj.ListNode cur = heap.poll();
+            ListNode cur = heap.poll();
             if (head == null) {
                 head = cur;
                 pre = head;
@@ -41,16 +41,16 @@ public class _23_MergeKSortedList {
         return head;
     }
 
-    public org.buaa.nlp.cj.ListNode mergeKLists(org.buaa.nlp.cj.ListNode[] lists) {
-        Heap<org.buaa.nlp.cj.ListNode> heap = new Heap<org.buaa.nlp.cj.ListNode>();
+    public ListNode mergeKLists(ListNode[] lists) {
+        Heap<ListNode> heap = new Heap<ListNode>();
         for (int i = 0; i < lists.length; i++) {
-            org.buaa.nlp.cj.ListNode node = lists[i];
+            ListNode node = lists[i];
             if (node != null)
                 heap.add(lists[i]);
         }
 
-        org.buaa.nlp.cj.ListNode head = null;
-        org.buaa.nlp.cj.ListNode pre = head;
+        ListNode head = null;
+        ListNode pre = head;
 
         while (heap.size > 0) {
             ListNode cur = heap.delete();

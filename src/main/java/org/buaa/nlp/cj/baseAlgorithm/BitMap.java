@@ -1,6 +1,8 @@
 package org.buaa.nlp.cj.baseAlgorithm;
 
 /**
+ *
+ * 扩展：如果是2-bitmap，则每次置值是同时置2*val和2*val+1即可，取值是也同时取2*val和2*val+1
  * Created by I320592 on 7/31/2015.
  */
 public class BitMap {

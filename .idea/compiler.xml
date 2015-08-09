@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <option name="DEFAULT_COMPILER" value="Javac" />
     <resourceExtensions />
     <wildcardResourcePatterns>
       <entry name="!?*.java" />
@@ -23,12 +22,10 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="javabase" />
+        <module name="practice" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="javabase" target="1.5" />
-      <module name="leetcode" target="1.5" />
       <module name="practice" target="1.5" />
     </bytecodeTargetLevel>
   </component>
