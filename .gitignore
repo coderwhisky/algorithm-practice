@@ -8,4 +8,4 @@
 *.war
 *.ear
 .idea/workspace.xml
-.idea/
+.idea/*
