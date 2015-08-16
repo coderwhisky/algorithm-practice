@@ -1,11 +1,11 @@
-package org.buaa.nlp.cj.cci150;
+package org.buaa.nlp.cj.cci150._8_5;
 
 /**
  * Created by whisky-yonk on 8/16/2015.
  */
 public class _1_InsertM2N {
     /**
-     * 来源：http://codecloud.net/alibaba-333.html
+     * 来源：
      *
      * 将M插入到N中第j到第i位
      *
