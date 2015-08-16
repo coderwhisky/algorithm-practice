@@ -5,6 +5,8 @@ package org.buaa.nlp.cj.cci150;
  */
 public class _1_InsertM2N {
     /**
+     * 来源：http://codecloud.net/alibaba-333.html
+     *
      * 将M插入到N中第j到第i位
      *
      * 步骤：
