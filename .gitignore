@@ -8,3 +8,8 @@
 *.war
 *.ear
 
+./.idea
+.idea
+.idea/*
+.idea/
+
