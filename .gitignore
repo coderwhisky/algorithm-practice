@@ -7,9 +7,4 @@
 *.jar
 *.war
 *.ear
-.idea/workspace.xml
-
-.idea/*
-target/*
-workspace.xml
 
