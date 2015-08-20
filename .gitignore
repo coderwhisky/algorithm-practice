@@ -8,4 +8,10 @@
 *.war
 *.ear
 .idea/workspace.xml
+<<<<<<< HEAD
 .idea/*
+=======
+.idea/
+target/
+workspace.xml
+>>>>>>> bcfa7f03a9a23bfa40fd3dbe088a77dcd244ec32
