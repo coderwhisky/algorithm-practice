@@ -9,7 +9,7 @@
 *.ear
 .idea/workspace.xml
 
-.idea/
-target/
+.idea/*
+target/*
 workspace.xml
 
