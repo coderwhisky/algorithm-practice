@@ -1,4 +1,4 @@
-package org.buaa.nlp.cj;
+package org.buaa.nlp.cj.others;
 
 import java.util.HashMap;
 import java.util.Iterator;

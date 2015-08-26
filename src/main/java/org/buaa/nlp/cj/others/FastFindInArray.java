@@ -1,4 +1,4 @@
-package org.buaa.nlp.cj;
+package org.buaa.nlp.cj.others;
 
 /**
  * 来源：http://blog.csdn.net/morewindows/article/details/10645269

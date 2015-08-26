@@ -1,4 +1,4 @@
-package org.buaa.nlp.cj;
+package org.buaa.nlp.cj.others;
 
 /**
  * Created by whisky-yonk on 8/23/2015.
