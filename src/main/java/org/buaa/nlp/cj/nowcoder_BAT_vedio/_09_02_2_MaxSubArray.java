@@ -4,6 +4,11 @@ import java.util.Arrays;
 import java.util.Random;
 
 /**
+ * 题目二
+
+ 子数组的最大累加和问题
+
+ 给定一个数组arr，返回子数组的最大累加和。例如，arr=[1,-2,3,5,-2,6,-1]，所有的子数组中，[3,5,-2,6]可以累加出最大的和12，所以返回12。
  * Created by Administrator on 2015/9/2.
  */
 public class _09_02_2_MaxSubArray {
