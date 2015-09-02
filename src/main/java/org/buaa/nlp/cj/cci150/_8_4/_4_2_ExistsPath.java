@@ -8,7 +8,7 @@ import com.sun.corba.se.impl.orbutil.graph.Graph;
 public class _4_2_ExistsPath {
 
     public static void main(String[] args) {
-        Graph graph = new Graph() {
-        }
+//        Graph graph = new Graph() {
+//        }
     }
 }
