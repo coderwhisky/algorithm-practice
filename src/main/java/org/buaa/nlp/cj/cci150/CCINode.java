@@ -7,6 +7,10 @@ public class CCINode {
     public int val;
     public CCINode next = null;
 
+    public CCINode(){
+        this.next = null;
+    };
+
     public CCINode(int val) {
         this.val = val;
     }
