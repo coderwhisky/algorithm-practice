@@ -1,4 +1,4 @@
-package org.buaa.nlp.cj.nowcoder_BAT_vedio;
+package org.buaa.nlp.cj.nowcoder_BAT_vedio._2015_09_02;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -11,7 +11,7 @@ import java.util.Random;
  给定一个无序数组arr，其中元素可正、可负、可0，再给定一个整数k，求arr所有的子数组中累加和为k的最长子数组长度。
  * Created by Administrator on 2015/9/2.
  */
-public class _09_02_05_MaxSubArrayOfKSum {
+public class _05_MaxSubArrayOfKSum {
     public int maxKSum0(int[] arr, int k) {
         if (arr.length < 1)
             return -1;
@@ -57,7 +57,7 @@ public class _09_02_05_MaxSubArrayOfKSum {
         return maxlen;
     }
     public static void main(String[] args) {
-        _09_02_05_MaxSubArrayOfKSum maxSubArrayOfKSum = new _09_02_05_MaxSubArrayOfKSum();
+        _05_MaxSubArrayOfKSum maxSubArrayOfKSum = new _05_MaxSubArrayOfKSum();
         for (int i = 0; i < 1000; i++) {
             int[] arr = new int[10];
             Random random = new Random();

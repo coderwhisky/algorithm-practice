@@ -1,4 +1,4 @@
-package org.buaa.nlp.cj.nowcoder_BAT_vedio;
+package org.buaa.nlp.cj.nowcoder_BAT_vedio._2015_09_02;
 
 import java.util.Arrays;
 import java.util.Random;
@@ -11,7 +11,7 @@ import java.util.Random;
  给定一个数组arr，返回子数组的最大累加和。例如，arr=[1,-2,3,5,-2,6,-1]，所有的子数组中，[3,5,-2,6]可以累加出最大的和12，所以返回12。
  * Created by Administrator on 2015/9/2.
  */
-public class _09_02_2_MaxSubArray {
+public class _2_MaxSubArray {
     public int maxSum(int[] arr) {
         if (arr == null)
             return -999999;
@@ -45,7 +45,7 @@ public class _09_02_2_MaxSubArray {
     }
 
     public static void main(String[] args) {
-        _09_02_2_MaxSubArray maxSubArray = new _09_02_2_MaxSubArray();
+        _2_MaxSubArray maxSubArray = new _2_MaxSubArray();
         for (int i = 0; i < 1000; i++) {
             int[] arr = new int[10];
             Random random = new Random();
