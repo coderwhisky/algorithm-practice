@@ -98,7 +98,8 @@ public class BinaryTree {
     }
 
     /**
-     * 非递归前序遍历2
+     * 非递归前序遍历2 *****************************
+     * 简单易懂，
      * @param p
      */
     public static void interativePreOrder2(Node<Integer> p) {
@@ -261,7 +262,8 @@ public class BinaryTree {
     }
 
     /**
-     * 非递归实现中序遍历2
+     * 非递归实现中序遍历2 ******************
+     * 简单易懂：
      * @param node
      */
     public static void interativeInOrder2(Node<Integer> node) {
