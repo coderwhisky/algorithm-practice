@@ -78,25 +78,7 @@ public class BinaryTree {
         }
     }
 
-    /**
-     * 非递归前序遍历
-     * @param p
-     */
-    public static void interativePreOrder(Node<Integer> p) {
-        Stack<Node<Integer>> stack = new Stack<Node<Integer>>();
-        if (p != null) {
-            stack.push(p);
-            while (!stack.empty()) {
-                p = stack.pop();
-                visit(p);
-                if (p.getLchild() != null)
-                    stack.push(p.getRchild());
-                if (p.getRchild() != null)
-                    stack.push(p.getLchild());
-            }
-        }
-    }
-
+    // ************* here is the plainest algorithm ***************** start
     /**
      * 非递归前序遍历2 *****************************
      * 简单易懂，
@@ -105,7 +87,7 @@ public class BinaryTree {
     public static void interativePreOrder2(Node<Integer> p) {
         Stack<Node<Integer>> stack = new Stack<Node<Integer>>();
         Node<Integer> node = p;
-        while (node != null && stack.size() > 0) {
+        while (node != null || stack.size() > 0) {
             // 压入所有的左节点，压入前，先访问
             while (node != null) {
                 visit(node);
@@ -116,6 +98,27 @@ public class BinaryTree {
             // 左子树访问完后访问又子树
             if (stack.size() > 0) {
                 node = stack.pop();
+                node = node.getRchild();
+            }
+        }
+    }
+
+    /**
+     * 非递归实现中序遍历2 ******************
+     * 简单易懂：
+     * @param node
+     */
+    public static void interativeInOrder2(Node<Integer> node) {
+        Stack<Node> stack = new Stack<Node>();
+        Node p = node;
+        while (p != null || stack.size() > 0) {
+            while (p != null) {
+                stack.push(p);
+                p = p.getLchild();
+            }
+            if (stack.size() > 0) {
+                p = stack.pop();
+                visit(node);
                 node = node.getRchild();
             }
         }
@@ -145,6 +148,28 @@ public class BinaryTree {
             // 处理右子节点
             stack.push(node);
             node = node.getRchild();
+        }
+    }
+    // ************* here is the plainest algorithm ***************** end
+
+
+
+    /**
+     * 非递归前序遍历
+     * @param p
+     */
+    public static void interativePreOrder(Node<Integer> p) {
+        Stack<Node<Integer>> stack = new Stack<Node<Integer>>();
+        if (p != null) {
+            stack.push(p);
+            while (!stack.empty()) {
+                p = stack.pop();
+                visit(p);
+                if (p.getLchild() != null)
+                    stack.push(p.getRchild());
+                if (p.getRchild() != null)
+                    stack.push(p.getLchild());
+            }
         }
     }
 
@@ -258,27 +283,6 @@ public class BinaryTree {
                 node = stack.pop();
             else
                 node = null;
-        }
-    }
-
-    /**
-     * 非递归实现中序遍历2 ******************
-     * 简单易懂：
-     * @param node
-     */
-    public static void interativeInOrder2(Node<Integer> node) {
-        Stack<Node> stack = new Stack<Node>();
-        Node p = node;
-        while (p != null || stack.size() > 0) {
-            while (p != null) {
-                stack.push(p);
-                p = p.getLchild();
-            }
-            if (stack.size() > 0) {
-                p = stack.pop();
-                visit(node);
-                node = node.getRchild();
-            }
         }
     }
 
