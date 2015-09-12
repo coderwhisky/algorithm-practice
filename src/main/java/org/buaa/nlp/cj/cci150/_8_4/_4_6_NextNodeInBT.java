@@ -7,17 +7,57 @@ import java.util.Stack;
  * Created by Administrator on 2015/9/12.
  */
 public class _4_6_NextNodeInBT {
+    
+    static class BiTreeNode2 {
+        public int val;
+        public BiTreeNode2 lchild = null;
+        public BiTreeNode2 rchild = null;
+        public BiTreeNode2 parent = null;
 
+        public BiTreeNode2(int val) {
+            this.val = val;
+        }
+    }
+
+    /**
+     * 找出指定结点的下一个结点
+     * @param n
+     * @return
+     */
+    public BiTreeNode2 inOrderSucc(BiTreeNode2 n) {
+        if (n == null)
+            return null;
+        if (n.rchild != null) {
+            return leftMostChild(n.rchild);
+        } else {
+            BiTreeNode2 q = n;
+            BiTreeNode2 x = q.parent;
+            while (x != null && x.lchild != q) {
+                q = x;
+                x = x.parent;
+            }
+            return x;
+        }
+    }
+
+    public BiTreeNode2 leftMostChild(BiTreeNode2 n) {
+        if (n == null)
+            return null;
+        while (n.lchild != null) {
+            n = n.lchild;
+        }
+        return n;
+    }
 
     public static void main(String[] args) {
         _4_6_NextNodeInBT nextNodeInBT = new _4_6_NextNodeInBT();
-        BiTreeNode root = new BiTreeNode(15);
-        root.lchild = new BiTreeNode(10);
-        root.rchild = new BiTreeNode(20);
-        root.lchild.lchild = new BiTreeNode(4);
-        root.lchild.rchild = new BiTreeNode(13);
-        root.rchild.lchild = new BiTreeNode(18);
-        root.rchild.rchild = new BiTreeNode(30);
+        BiTreeNode2 root = new BiTreeNode2(15);
+        root.lchild = new BiTreeNode2(10);
+        root.rchild = new BiTreeNode2(20);
+        root.lchild.lchild = new BiTreeNode2(4);
+        root.lchild.rchild = new BiTreeNode2(13);
+        root.rchild.lchild = new BiTreeNode2(18);
+        root.rchild.rchild = new BiTreeNode2(30);
         nextNodeInBT.nonRecursivePreOrder(root);
         System.out.println();
         nextNodeInBT.nonRecursiveInOrder(root);
@@ -26,9 +66,9 @@ public class _4_6_NextNodeInBT {
     }
 
     // this is practice for binary tree travel +++++ start
-    public void nonRecursivePreOrder(BiTreeNode root) {
-        Stack<BiTreeNode> stack = new Stack<BiTreeNode>();
-        BiTreeNode p = root;
+    public void nonRecursivePreOrder(BiTreeNode2 root) {
+        Stack<BiTreeNode2> stack = new Stack<BiTreeNode2>();
+        BiTreeNode2 p = root;
         while (p != null || stack.size() > 0) {
             while (p != null) {
                 stack.push(p);
@@ -43,9 +83,9 @@ public class _4_6_NextNodeInBT {
         }
     }
 
-    public void nonRecursiveInOrder(BiTreeNode root) {
-        Stack<BiTreeNode> stack = new Stack<BiTreeNode>();
-        BiTreeNode p = root;
+    public void nonRecursiveInOrder(BiTreeNode2 root) {
+        Stack<BiTreeNode2> stack = new Stack<BiTreeNode2>();
+        BiTreeNode2 p = root;
 
         while (p != null || stack.size() > 0) {
             while (p != null) {
@@ -61,10 +101,10 @@ public class _4_6_NextNodeInBT {
         }
     }
 
-    public void nonRecursivePostOrder(BiTreeNode root) {
-        BiTreeNode lastVisit = root;
-        BiTreeNode p = root;
-        Stack<BiTreeNode> stack = new Stack<BiTreeNode>();
+    public void nonRecursivePostOrder(BiTreeNode2 root) {
+        BiTreeNode2 lastVisit = root;
+        BiTreeNode2 p = root;
+        Stack<BiTreeNode2> stack = new Stack<BiTreeNode2>();
 
         while (p != null || stack.size() > 0) {
             while (p.lchild != null) {
