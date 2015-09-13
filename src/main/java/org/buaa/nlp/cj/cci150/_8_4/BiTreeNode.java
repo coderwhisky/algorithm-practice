@@ -11,4 +11,10 @@ public class BiTreeNode {
     public BiTreeNode(int val) {
         this.val = val;
     }
+
+    public void travel(BiTreeNode root) {
+        if (root == null)
+            return;
+        System.out.println();
+    }
 }
