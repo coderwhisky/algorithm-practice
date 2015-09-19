@@ -1,4 +1,4 @@
-package org.buaa.nlp.cj.concurrentprogram.javaConcurrencyInPractice;
+package org.buaa.nlp.cj.concurrentprogram;
 
 /**
  * Created by whisky on 2015/6/2.

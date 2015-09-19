@@ -22,7 +22,7 @@ public class _4_3_CreateMinimalBST {
     }
 
     public static void main(String[] args) {
-        int[] arr =
+//        int[] arr =
     }
 
 }
