@@ -1,4 +1,4 @@
-package org.buaa.nlp.cj.mogujie;
+package org.buaa.nlp.cj.jobOnlineProgram.mogujie;
 
 import java.util.Scanner;
 
