@@ -1,23 +1,38 @@
-package org.buaa.nlp.cj.meituan;
+package org.buaa.nlp.cj.jobOnlineProgram.meituan;
 
-import org.buaa.nlp.cj.designpattern.composite.Tree;
-
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 /**
  * Created by whisky-yonk on 9/19/2015.
  */
 public class _1_FriendsAndEnemy {
+
+    public int sub(int i, int j) {
+        try {
+            return i-j;
+        } catch (Exception e) {
+            System.out.println("catch");
+        } finally {
+            System.out.println("fin");
+        }
+        return 0;
+    }
     public static void main(String[] args) {
-        String[] arr = {
-                "0 1 1",
-                "1 2 0",
-                "2 3 1",
-                "3 4 0"
-        };
-        System.out.println(new _1_FriendsAndEnemy().countPerson(arr));
-        System.out.println(new _1_FriendsAndEnemy().find(arr, 4));
+        System.out.println("substract:" +new _1_FriendsAndEnemy().sub(10,4));
+//        Map<String, String> hh = new HashMap<>();
+//        hh.put("")
+//
+//        String[] arr = {
+//                "0 1 1",
+//                "1 2 0",
+//                "2 3 1",
+//                "3 4 0"
+//        };
+//        System.out.println(new _1_FriendsAndEnemy().countPerson(arr));
+//        System.out.println(new _1_FriendsAndEnemy().find(arr, 4));
     }
 
     public int find(String[] arr, int size) {

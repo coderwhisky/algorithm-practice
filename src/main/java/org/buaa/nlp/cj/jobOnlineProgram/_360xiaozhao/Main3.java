@@ -1,4 +1,4 @@
-package org.buaa.nlp.cj._360xiaozhao;
+package org.buaa.nlp.cj.jobOnlineProgram._360xiaozhao;
 
 import java.util.Scanner;
 

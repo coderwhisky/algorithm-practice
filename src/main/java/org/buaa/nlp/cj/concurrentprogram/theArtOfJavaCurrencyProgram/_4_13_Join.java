@@ -8,19 +8,19 @@ import java.util.concurrent.TimeUnit;
 public class _4_13_Join {
 
     public static void main(String[] args) throws InterruptedException {
-        String str = "hello";
-        str += ' a';
-        int strlen = str.length();
-        str = 100;
-        str = str +100;
-        Thread previous = Thread.currentThread();
-        for (int i = 0; i < 10; i++) {
-            Thread thread = new Thread(new Domino(previous), String.valueOf(i));
-            thread.start();
-            previous = thread;
-        }
-        TimeUnit.SECONDS.sleep(5);
-        System.out.println(Thread.currentThread().getName() + " terminate.");
+//        String str = "hello";
+//        str += ' a';
+//        int strlen = str.length();
+//        str = 100;
+//        str = str +100;
+//        Thread previous = Thread.currentThread();
+//        for (int i = 0; i < 10; i++) {
+//            Thread thread = new Thread(new Domino(previous), String.valueOf(i));
+//            thread.start();
+//            previous = thread;
+//        }
+//        TimeUnit.SECONDS.sleep(5);
+//        System.out.println(Thread.currentThread().getName() + " terminate.");
     }
 
     static class Domino implements Runnable {

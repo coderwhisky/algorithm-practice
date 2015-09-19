@@ -1,4 +1,4 @@
-package org.buaa.nlp.cj.JD;
+package org.buaa.nlp.cj.jobOnlineProgram.JD;
 
 import java.util.Scanner;
 

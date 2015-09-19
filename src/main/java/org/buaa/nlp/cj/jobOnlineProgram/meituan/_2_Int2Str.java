@@ -1,4 +1,4 @@
-package org.buaa.nlp.cj.meituan;
+package org.buaa.nlp.cj.jobOnlineProgram.meituan;
 
 /**
  * Created by whisky-yonk on 9/19/2015.

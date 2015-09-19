@@ -1,9 +1,7 @@
-package org.buaa.nlp.cj._360xiaozhao;
+package org.buaa.nlp.cj.jobOnlineProgram._360xiaozhao;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import java.util.Scanner;
 
 /**
  * Created by whisky-yonk on 9/15/2015.

@@ -1,4 +1,4 @@
-package org.buaa.nlp.cj.JD;
+package org.buaa.nlp.cj.jobOnlineProgram.JD;
 
 /**
  * Created by whisky-yonk on 9/19/2015.
