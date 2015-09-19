@@ -10,66 +10,96 @@ import java.util.Set;
  */
 public class _1_FriendsAndEnemy {
 
-    public int sub(int i, int j) {
-        try {
-            return i-j;
-        } catch (Exception e) {
-            System.out.println("catch");
-        } finally {
-            System.out.println("fin");
-        }
-        return 0;
-    }
     public static void main(String[] args) {
-        System.out.println("substract:" +new _1_FriendsAndEnemy().sub(10,4));
-//        Map<String, String> hh = new HashMap<>();
-//        hh.put("")
-//
-//        String[] arr = {
+//        String[] str = {
 //                "0 1 1",
 //                "1 2 0",
 //                "2 3 1",
 //                "3 4 0"
 //        };
-//        System.out.println(new _1_FriendsAndEnemy().countPerson(arr));
-//        System.out.println(new _1_FriendsAndEnemy().find(arr, 4));
+//        int size = 4;
+        String[] str = {
+                "0 1 1",
+                "1 2 0",
+                "2 3 0",
+        };
+        int size = 3;
+        System.out.println(find(str, size));
     }
 
-    public int find(String[] arr, int size) {
-        int result = 0;
-        int persons = countPerson(arr);
-        int[][] stat = new int[persons][persons];
-        for (int i = 0; i < size; i++) {
-            int p1 = Integer.valueOf(arr[i].substring(0,1));
-            int p2 = Integer.valueOf(arr[i].substring(2,3));
-            int isFriend = Integer.valueOf(arr[i].substring(4));
-            stat[p1][p1] = isFriend;
-        }
-        boolean[] visit = new boolean[persons];
-        for (int i = 0; i < persons; i++)
-            visit[i] = false;
-        visit[0] = true;
+    public static int find(String[] str, int size) {
+        int peopleNum = 0;
+        int[][] enemy;
+        int[] father;
 
-        for (int i = 0; i < persons; i++) {
-            for (int j = i; j < persons; j++)
-            if (!visit[i] && stat[i][j] == 1) {
-                visit[j] = true;
-                continue;
-            }else {
-                result ++;
+        // count people num
+        for (int i = 0; i < size; i ++) {
+            String[] tmp = str[i].split(" ");
+            if (Integer.parseInt(tmp[0]) > peopleNum) {
+                peopleNum = Integer.parseInt(tmp[0]);
+            }
+            if (Integer.parseInt(tmp[1]) > peopleNum) {
+                peopleNum = Integer.parseInt(tmp[1]);
             }
         }
-        return result;
+        peopleNum += 1;
+        father = new int[peopleNum];
+        for (int i = 0; i < peopleNum; i ++) {
+            father[i] = i;
+        }
+
+        // enemy record
+        enemy = new int[peopleNum][peopleNum];
+
+        //
+        for (int i = 0; i < size; i ++) {
+            String[] tmp = str[i].split(" ");
+            int first = Integer.parseInt(tmp[0]);
+            int second = Integer.parseInt(tmp[1]);
+            int third = Integer.parseInt(tmp[2]);
+            if (third == 1) {
+                friendMerge(father, first, second);
+            }
+            if (third == 0) {
+                for (int j = 1; j <= enemy[first][0]; j ++) {
+                    friendMerge(father, second, enemy[first][j]);
+                }
+                for (int j = 1; j <= enemy[second][0]; j ++) {
+                    friendMerge(father, first, enemy[second][j]);
+                }
+                enemy[first][0] ++;
+                enemy[first][enemy[first][0]] = second;
+
+                enemy[second][0] ++;
+                enemy[second][enemy[second][0]] = first;
+            }
+        }
+
+        int groupCount = 0;
+        for (int i = 0; i < peopleNum; i ++) {
+            if (father[i] == i) {
+                groupCount ++;
+            }
+        }
+
+        return groupCount;
     }
 
-    public int countPerson(String[] arr) {
-        Set<Integer> persons = new HashSet<Integer>();
-        for (int i = 0; i < arr.length; i++) {
-            int p1 = Integer.valueOf(arr[i].substring(0,1));
-            int p2 = Integer.valueOf(arr[i].substring(2,3));
-            persons.add(p1);
-            persons.add(p2);
+    public static void friendMerge(int father[], int x, int y) {
+        x = findFather(father, x);
+        y = findFather(father, y);
+        if (x < y) {
+            father[y] = x;
+        } else {
+            father[x] = y;
         }
-        return persons.size();
     }
+
+    public static int findFather(int father[], int x) {
+        if (father[x] != x) {
+            father[x] = findFather(father, father[x]);
+        }
+        return father[x];
+    }
+
 }
