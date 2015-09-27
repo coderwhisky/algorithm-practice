@@ -52,4 +52,5 @@ public class MinApple {
         return sum;
     }
 
+
 }
