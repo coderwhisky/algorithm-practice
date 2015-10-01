@@ -1,88 +1,116 @@
 package org.buaa.nlp.cj.baseAlgorithm.graph;
 
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Queue;
+import java.util.Stack;
 
 /**
  * Created by Administrator on 2015/9/10.
  */
 public class GraphByMatrix {
-    int size;
-    boolean g[][] = new boolean[100][100];
-    boolean vis[] = new boolean[100];
-    int indegree[] = new int[100];
-    int outdegree[] = new int[100];
-    Queue<Integer> q = new LinkedList<Integer>();
-    Vetex<Integer> vv[] = new Vetex[1000];
+    private static int[][] edges;
+    private static int n;
+    private static int e;
+    private static boolean[] visit;
 
-    public GraphByMatrix(int s, int v[], boolean g[][]) {
-        this.size = s;
-        for (int i = 0; i < size; i++) {
-            vv[i] = new Vetex<Integer>(v[i]);
+    public GraphByMatrix(int[][] edge, int nNode, int nEdge) {
+        visit = new boolean[nNode];
+        edges = new int[nNode][nNode];
+        for (int i = 0; i < nNode; i++) {
+            for (int j = 0; j < nNode; j++) {
+                edges[i][j] = edge[i][j];
+            }
+            visit[i] = false;
+        }
+        n = nNode;
+        e = nEdge;
+    }
+
+    /**
+     * 深度优先遍历，递归实现
+     * @param v
+     */
+    public static void DFS(int v) {
+        if (v < 0 || v >= n) {
+            System.out.println("invalid node");
+            return;
         }
 
-        for (int i = 0; i < size; i++) {
-            for (int j = 0; j < size; j++) {
-                this.g[i][j] = g[i][j];
+        System.out.print(v + " ");
+        visit[v] = true;
+        for (int i = 0; i < n; i++) {
+            if (edges[v][i] != 0 && !visit[i]) {
+                DFS(i);
             }
         }
     }
 
     /**
-     * return the first adjacent vertex to 'v'
+     * 深度优先遍历，非递归实现。
      * @param v
-     * @return
      */
-    public int firstAdjVex(int v) {
-        for (int j = 0; j < size; j++) {
-            if (g[v][j])
-                return j;
+    public static void DFS2(int v) {
+        Stack<Integer> stack = new Stack<>();
+        System.out.print(v + " ");
+        visit[v] = true;
+        stack.push(v);
+
+        while (!stack.isEmpty()) {
+            int top = stack.peek();
+            int i = -1;
+            for (i = 0; i < n; i++) {
+                if (edges[top][i] != 0 && !visit[i]) {
+                    System.out.print(i + " ");
+                    visit[i] = true;
+                    stack.push(i);
+                    break;
+                }
+            }
+            if (i == n) {
+                stack.pop();
+            }
         }
-        return -1;
     }
 
     /**
-     * return the first adjacent vertex to 'v' next to v's adjacent vertex u
+     * 广度优先遍历
      * @param v
-     * @param u
-     * @return
      */
-    public int nextAdjVex(int v, int u) {
-        if (g[v][u]) {
-            for (int j = u+1; j < size; j++) {
-                if (g[v][j])
-                    return j;
-            }
-        }
-        return -1;
-    }
+    public static void BFS(int v) {
+        LinkedList<Integer> queue = new LinkedList<>();
+        System.out.print(v + " ");
+        queue.add(v);
+        visit[v] = true;
 
-    public void indegreeCount() {
-        for (int i = 0; i < size; i++) {
-            for (int j = 0; j < size; j++) {
-                this.indegree[i] += g[j][i] ? 1 : 0;
-            }
-        }
-    }
-
-    public void outdegreeCount() {
-        for (int i = 0; i < size; i++) {
-            for (int j = 0; j < size; j++) {
-                this.outdegree[i] += g[i][j] ? 1 : 0;
+        while (!queue.isEmpty()) {
+            int front = queue.poll();
+            int i = -1;
+            for (i = 0; i < n; i++) {
+                if (edges[front][i] != 0 && !visit[i]) {
+                    System.out.print(i + " ");
+                    visit[i] = true;
+                    queue.offer(i);
+                }
             }
         }
     }
 
-    public void bfs() {
-        for (int i = 0; i < size; i++) {
-
-        }
+    public static void main(String[] args) {
+        int[][] edges = {
+                {0,1,1,0,0,0,0,0},
+                {1,0,0,1,1,0,0,0},
+                {1,0,0,0,0,1,1,0},
+                {0,1,0,0,0,0,0,1},
+                {0,1,0,0,0,0,0,1},
+                {0,0,1,0,0,0,1,0},
+                {0,0,1,0,0,1,0,0},
+                {0,0,0,1,1,0,0,0}
+        };
+        GraphByMatrix graphByMatrix = new GraphByMatrix(edges, 8, 9);
+//        DFS(0);
+//        DFS2(0);
+//        BFS(3);
     }
 
-    private class Vetex<T> {
-        T data;
-        public Vetex(T d) {
-            this.data = d;
-        }
-    }
 }
