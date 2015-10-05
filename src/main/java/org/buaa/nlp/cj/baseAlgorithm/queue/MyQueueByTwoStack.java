@@ -9,7 +9,9 @@ public class MyQueueByTwoStack<T> {
     Stack<T> stackNewest, stackOldest;
 
     public MyQueueByTwoStack() {
+        // 相当于队尾
         this.stackNewest = new Stack<T>();
+        // 相当于队首
         this.stackOldest = new Stack<T>();
     }
 
