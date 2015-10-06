@@ -1,4 +1,4 @@
-package org.buaa.nlp.cj.nowcoder_BAT_vedio._2015_08_12;
+package org.buaa.nlp.cj.codingInterviewGuide._2015_08_12;
 
 import java.util.Stack;
 

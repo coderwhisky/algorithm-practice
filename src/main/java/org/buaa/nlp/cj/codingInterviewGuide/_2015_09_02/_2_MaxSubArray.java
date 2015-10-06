@@ -1,4 +1,4 @@
-package org.buaa.nlp.cj.nowcoder_BAT_vedio._2015_09_02;
+package org.buaa.nlp.cj.codingInterviewGuide._2015_09_02;
 
 import java.util.Arrays;
 import java.util.Random;
