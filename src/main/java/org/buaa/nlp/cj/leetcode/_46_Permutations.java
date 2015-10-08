@@ -18,21 +18,19 @@ public class _46_Permutations {
     public List<List<Integer>> permute(int[] nums) {
         permute(nums, 0);
 //        List<List<Integer>> ser = permute(nums, 0);
-//        for (List<Integer> l : ser) {
-//            System.out.println(l.toString());
-//        }
+        for (List<Integer> l : ser) {
+            System.out.println(l.toString());
+        }
         return ser;
     }
 
     public List<List<Integer>> permute(int[] nums, int k) {
-
         if (k == nums.length-1) {
             List<Integer> l = new ArrayList<>();
             for (int i = 0; i < nums.length; i++) {
                 l.add(nums[i]);
             }
             ser.add(l);
-            System.out.println(l.toString());
         } else {
             for (int j = k; j < nums.length; j++) {
                 swap(nums, j, k);
@@ -50,7 +48,7 @@ public class _46_Permutations {
     }
 
     public static void main(String[] args) {
-        int[] nums = {0,1};
+        int[] nums = {1,2,3,4};
         new _46_Permutations().permute(nums);
     }
 }
