@@ -24,6 +24,8 @@ public class SourceInsight {
             protected boolean exec() {
                 return false;
             }
+
+            Object obj = new Object();
         };
 
 //        RecursiveAction;
