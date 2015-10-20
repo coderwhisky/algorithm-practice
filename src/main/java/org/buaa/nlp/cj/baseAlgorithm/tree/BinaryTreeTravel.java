@@ -5,15 +5,15 @@ import java.util.Stack;
 /**
  * Created by Administrator on 2015/8/9.
  */
-public class BinaryTree {
+public class BinaryTreeTravel {
     private Node<Integer> root;
     private int size;
 
-    public BinaryTree() {
+    public BinaryTreeTravel() {
         root = new Node<Integer>();
     }
 
-    public BinaryTree(Node<Integer> node) {
+    public BinaryTreeTravel(Node<Integer> node) {
         this.root = node;
     }
 
@@ -343,49 +343,49 @@ public class BinaryTree {
     }
 
     public static void main(String[] args) {
-        BinaryTree tree = new BinaryTree(init());
+        BinaryTreeTravel tree = new BinaryTreeTravel(init());
         System.out.print(" Pre-Order:");
-        BinaryTree.inOrder(tree.getRoot());
+        BinaryTreeTravel.inOrder(tree.getRoot());
         System.out.println();
 
         System.out.print("  In-Order:");
-        BinaryTree.inOrder(tree.getRoot());
+        BinaryTreeTravel.inOrder(tree.getRoot());
         System.out.println();
 
         System.out.print("Post-Order:");
-        BinaryTree.postOrder(tree.getRoot());
+        BinaryTreeTravel.postOrder(tree.getRoot());
         System.out.println();
 
         System.out.print(" Pre-Order:");
-        BinaryTree.interativePreOrder(tree.getRoot());
+        BinaryTreeTravel.interativePreOrder(tree.getRoot());
         System.out.println();
 
         System.out.print("Pre-Order2:");
-        BinaryTree.interativePreOrder2(tree.getRoot());
+        BinaryTreeTravel.interativePreOrder2(tree.getRoot());
         System.out.println();
 
         System.out.print("  In-Order:");
-        BinaryTree.interativeInOrder(tree.getRoot());
+        BinaryTreeTravel.interativeInOrder(tree.getRoot());
         System.out.println();
 
         System.out.print(" In-Order2:");
-        BinaryTree.interativeInOrder2(tree.getRoot());
+        BinaryTreeTravel.interativeInOrder2(tree.getRoot());
         System.out.println();
 
         System.out.print(" Post-Order:");
-        BinaryTree.interativePostOrder(tree.getRoot());
+        BinaryTreeTravel.interativePostOrder(tree.getRoot());
         System.out.println();
 
         System.out.print("Post-Order2:");
-        BinaryTree.interativePostOrder2(tree.getRoot());
+        BinaryTreeTravel.interativePostOrder2(tree.getRoot());
         System.out.println();
 
         System.out.print("Post-Order3:");
-        BinaryTree.interativePostOrder3(tree.getRoot());
+        BinaryTreeTravel.interativePostOrder3(tree.getRoot());
         System.out.println();
 
         System.out.print("Post-Order4:");
-        BinaryTree.interativePostOrder4(tree.getRoot());
+        BinaryTreeTravel.interativePostOrder4(tree.getRoot());
         System.out.println();
     }
 }

@@ -1,5 +1,7 @@
 package org.buaa.nlp.cj.cci150._8_4;
 
+import org.buaa.nlp.cj.Utils.BiTreeNode;
+
 /**
  * 你有两棵非常大的二叉树：T1，有几百万个结点，T2，有几百个结点。设计一个算法，判断T2是否为T1的子树
  * Created by whisky-yonk on 9/12/2015.

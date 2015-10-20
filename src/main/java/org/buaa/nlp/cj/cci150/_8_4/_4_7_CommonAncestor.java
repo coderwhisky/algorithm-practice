@@ -1,5 +1,7 @@
 package org.buaa.nlp.cj.cci150._8_4;
 
+import org.buaa.nlp.cj.Utils.BiTreeNode;
+
 /**
  * 设计一个算法，找出二叉树中某两个结点的第一个共同祖先。
  * 不得将额外的结点存储在另外的数据结构中。注意，这不一定是二叉查找树

@@ -1,5 +1,7 @@
 package org.buaa.nlp.cj.cci150._8_4;
 
+import org.buaa.nlp.cj.Utils.BiTreeNode;
+
 /**
  * 给定一棵二叉树，其中每个节点都含有一个数值。设计一个算法，打印节点数值总和等于某个给定值的所有路径。
  * 注意：路径不一定非得从二叉树的根节点或者叶节点开始或结束

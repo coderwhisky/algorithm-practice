@@ -1,5 +1,7 @@
 package org.buaa.nlp.cj.cci150._8_4;
 
+import org.buaa.nlp.cj.Utils.BiTreeNode;
+
 /**
  * Created by whisky-yonk on 8/31/2015.
  */

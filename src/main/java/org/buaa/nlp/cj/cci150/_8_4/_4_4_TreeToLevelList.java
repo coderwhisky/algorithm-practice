@@ -1,10 +1,9 @@
 package org.buaa.nlp.cj.cci150._8_4;
 
-import org.buaa.nlp.cj.designpattern.composite.TreeNode;
+import org.buaa.nlp.cj.Utils.BiTreeNode;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.List;
 
 /**
  * 给定一颗二叉树，设计一个算法，创建含有某一深度上所有节点的链表（比如，若一颗树的深度为D，则会创建出D个链表）

@@ -1,5 +1,7 @@
 package org.buaa.nlp.cj.cci150._8_4;
 
+import org.buaa.nlp.cj.Utils.BiTreeNode;
+
 /**
  * 检查一颗二叉树是否是一颗二叉查找树
  * Created by Administrator on 2015/9/11.
