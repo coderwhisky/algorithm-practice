@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * Created by Administrator on 2015/10/9.
  */
-public class _2_ {
+public abstract class _2_ {
     public static int gcd(int a, int b) {
         if (a < b) {
             return gcd(b, a);
@@ -15,6 +15,7 @@ public class _2_ {
             return gcd(b, a%b);
         }
     }
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         while (scanner.hasNext()) {
