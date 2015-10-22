@@ -19,4 +19,5 @@ public class BiTreeNode {
     public void visit() {
         System.out.print(this.val+ " ");
     }
+
 }
