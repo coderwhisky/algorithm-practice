@@ -31,5 +31,6 @@ public class MaxMatrixWithoutDamage {
                 }
             }
         }
+        return 0;
     }
 }
