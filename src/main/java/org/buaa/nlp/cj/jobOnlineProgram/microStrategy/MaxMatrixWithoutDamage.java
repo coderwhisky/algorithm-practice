@@ -21,16 +21,38 @@ public class MaxMatrixWithoutDamage {
         stack.push(0);
         int max = 0;
         for (int i = 1; i < h; i++) {
-            int topIdx = stack.peek();
-            if (tmp[topIdx] < tmp[i]) {
+            if (stack.isEmpty()) {
                 stack.push(i);
             } else {
-                topIdx = stack.pop();
-                while (tmp[topIdx] >= tmp[i]) {
-                    topIdx = stack.pop();
+                int topIdx = stack.peek();
+                int cur = 0;
+                if (tmp[topIdx] < tmp[i]) {
+                    cur = tmp[i];
+                    max = tmp[i] > max ? tmp[i] : max;
+                    stack.push(i);
+                } else {
+                    while (tmp[topIdx] >= tmp[i]) {
+                        topIdx = stack.pop();
+                        cur = (i-topIdx)*tmp[topIdx];
+                        max = max < cur ? cur : max;
+                        topIdx = stack.peek();
+                    }
                 }
             }
         }
-        return 0;
+        return max;
+    }
+
+    public static void main(String[] args) {
+        int[][] field = {
+                {0,1,1,1,1},
+                {1,0,1,1,1},
+                {1,1,0,1,1},
+                {0,1,1,0,1}
+        };
+        int w = field.length;
+        int h = field[0].length;
+
+        System.out.println(maxArea(w,h,field));
     }
 }

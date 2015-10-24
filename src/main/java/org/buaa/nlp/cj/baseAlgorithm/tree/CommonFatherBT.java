@@ -15,8 +15,20 @@ public class CommonFatherBT {
             return false;
         }
         if (root == node)
-            return false;
+            return true;
         else
             return find(root.lchild, node) || find(root.rchild, node);
+    }
+
+    public static BiTreeNode commonFather(BiTreeNode root, BiTreeNode node1, BiTreeNode node2) {
+        if (root == null || root.lchild == null || root.rchild == null)
+            return null;
+        if (find(root.lchild, node1) && find(root.rchild, node2)) {
+            return root;
+        } else if (find(root.lchild, node1) && find(root.lchild, node2)) {
+            return commonFather(root.lchild, node1, node2);
+        } else {
+            return commonFather(root.rchild, node1, node2);
+        }
     }
 }
