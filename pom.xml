@@ -5,7 +5,10 @@
   <groupId>org.buaa.nlp.cj</groupId>
   <artifactId>practice</artifactId>
   <version>1.0-SNAPSHOT</version>
-  <packaging>jar</packaging>
+  <modules>
+    <module>thoughtWorks</module>
+  </modules>
+  <packaging>pom</packaging>
 
   <name>practice</name>
   <url>http://maven.apache.org</url>
