@@ -1,5 +1,6 @@
 package org.buaa.nlp.cj;
 
+import java.util.Vector;
 import java.util.concurrent.*;
 
 /**
@@ -28,7 +29,7 @@ public class SourceInsight {
             Object obj = new Object();
         };
 
-//        RecursiveAction;
-//        RecursiveTask;
+        Vector<Integer> vv = new Vector<>();
+        vv.add(4);
     }
 }
