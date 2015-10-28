@@ -17,7 +17,7 @@ public class GraphByAdjList {
 //        adj = new ArrayList[V];
         adj = new ArrayList<ArrayList<Integer>>();
         for (int i = 0; i < V; i++) {
-            ArrayList<Integer> tmp = new ArrayList<>();
+            ArrayList<Integer> tmp = new ArrayList<Integer>();
             tmp.add(i);
             adj.add(tmp);
         }

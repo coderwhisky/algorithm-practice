@@ -61,7 +61,7 @@ public class Dijkstra {
     }
 
     public static void printPath(int[] path, int v, int start) {
-        Stack<Integer> stack = new Stack<>();
+        Stack<Integer> stack = new Stack<Integer>();
         while (v != start) {
             stack.push(v);
             v = path[v];

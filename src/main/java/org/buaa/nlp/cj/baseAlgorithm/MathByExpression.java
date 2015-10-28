@@ -17,7 +17,7 @@ import java.util.Stack;
  * Created by Administrator on 2015/9/30.
  */
 public class MathByExpression {
-    private static Map<String, Integer> opPriorityMap = new HashMap<>();
+    private static Map<String, Integer> opPriorityMap = new HashMap<String, Integer>();
 
 
     public static void main(String[] args) {
@@ -34,26 +34,26 @@ public class MathByExpression {
     }
 
     public static int calculateBySuffix(String[] suffix) {
-        Stack<Integer> tmpRes = new Stack<>();
+        Stack<Integer> tmpRes = new Stack<Integer>();
 
         int i = 0;
         while (i < suffix.length) {
             while (i < suffix.length && isOp(suffix[i])) {
-                String tmpOp = suffix[i];
+                char tmpOp = suffix[i].charAt(0);
                 int tnum = Integer.MIN_VALUE;
                 int t1 = tmpRes.pop();
                 int t2 = tmpRes.pop();
                 switch (tmpOp) {
-                    case "+" :
+                    case '+' :
                         tnum = t2 + t1;
                         break;
-                    case "-" :
+                    case '-' :
                         tnum = t2 - t1;
                         break;
-                    case "*" :
+                    case '*' :
                         tnum = t2 * t1;
                         break;
-                    case "/" :
+                    case '/' :
                         tnum = t2 / t1;
                         break;
                 }
@@ -74,25 +74,25 @@ public class MathByExpression {
      * @return calculated result
      */
     public static int calculateByPrefix(String[] prefix) {
-        Stack<Integer> tmpRes = new Stack<>();
+        Stack<Integer> tmpRes = new Stack<Integer>();
 
         for (int i = prefix.length-1; i >= 0;) {
             while (i >= 0 && isOp(prefix[i])) {
-                String tmpOp = prefix[i];
+                char tmpOp = prefix[i].charAt(0);
                 int tnum = Integer.MIN_VALUE;
                 int t1 = tmpRes.pop();
                 int t2 = tmpRes.pop();
                 switch (tmpOp) {
-                    case "+" :
+                    case '+' :
                         tnum = t1 + t2;
                         break;
-                    case "-" :
+                    case '-' :
                         tnum = t1 - t2;
                         break;
-                    case "*" :
+                    case '*' :
                         tnum = t1 * t2;
                         break;
-                    case "/" :
+                    case '/' :
                         tnum = t1 / t2;
                         break;
                 }
@@ -126,8 +126,8 @@ public class MathByExpression {
      * @return
      */
     public static String[] nifix2prefix(String[] nifix) {
-        Stack<String> op = new Stack<>();
-        Stack<String> num = new Stack<>();
+        Stack<String> op = new Stack<String>();
+        Stack<String> num = new Stack<String>();
 
         int i = nifix.length - 1;
         while (i >= 0) {
@@ -194,8 +194,8 @@ public class MathByExpression {
      * @return
      */
     public static String[] nifix2suffix(String[] nifix) {
-        Stack<String> op = new Stack<>();
-        Stack<String> num = new Stack<>();
+        Stack<String> op = new Stack<String>();
+        Stack<String> num = new Stack<String>();
 
         int i = 0;
         while (i < nifix.length) {

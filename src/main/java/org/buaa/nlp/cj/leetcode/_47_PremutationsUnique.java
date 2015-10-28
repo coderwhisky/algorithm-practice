@@ -14,7 +14,7 @@ import java.util.List;
  * Created by Administrator on 2015/10/8.
  */
 public class _47_PremutationsUnique {
-    List<List<Integer>> ser = new ArrayList<>();
+    List<List<Integer>> ser = new ArrayList<List<Integer>>();
     public List<List<Integer>> permuteUnique(int[] nums) {
         permuteUnique(nums, 0);
         for (List<Integer> l : ser) {
@@ -26,7 +26,7 @@ public class _47_PremutationsUnique {
     public void permuteUnique(int[] nums, int k) {
         int len = nums.length;
         if (k == len-1) {
-            List<Integer> l = new ArrayList<>();
+            List<Integer> l = new ArrayList<Integer>();
             for (int i = 0; i < len; i++) {
                 l.add(nums[i]);
             }

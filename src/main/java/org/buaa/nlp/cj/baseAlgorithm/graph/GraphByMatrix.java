@@ -51,7 +51,7 @@ public class GraphByMatrix {
      * @param v
      */
     public static void DFS2(int v) {
-        Stack<Integer> stack = new Stack<>();
+        Stack<Integer> stack = new Stack<Integer>();
         System.out.print(v + " ");
         visit[v] = true;
         stack.push(v);
@@ -78,7 +78,7 @@ public class GraphByMatrix {
      * @param v
      */
     public static void BFS(int v) {
-        LinkedList<Integer> queue = new LinkedList<>();
+        LinkedList<Integer> queue = new LinkedList<Integer>();
         System.out.print(v + " ");
         queue.add(v);
         visit[v] = true;

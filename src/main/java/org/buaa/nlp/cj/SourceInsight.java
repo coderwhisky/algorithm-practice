@@ -29,7 +29,7 @@ public class SourceInsight {
             Object obj = new Object();
         };
 
-        Vector<Integer> vv = new Vector<>();
+        Vector<Integer> vv = new Vector<Integer>();
         vv.add(4);
     }
 }

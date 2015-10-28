@@ -30,7 +30,7 @@ public class BiSearchTree2List {
     }
 
     public static BiTreeNode toList(BiTreeNode root) {
-        Stack<BiTreeNode> stack = new Stack<>();
+        Stack<BiTreeNode> stack = new Stack<BiTreeNode>();
         BiTreeNode p = root;
         BiTreeNode prev = new BiTreeNode(), cur = null;
         BiTreeNode head = prev;

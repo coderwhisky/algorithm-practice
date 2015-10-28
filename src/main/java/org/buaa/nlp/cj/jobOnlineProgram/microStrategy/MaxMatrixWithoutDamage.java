@@ -17,7 +17,7 @@ public class MaxMatrixWithoutDamage {
             }
         }
 
-        Stack<Integer> stack = new Stack<>();
+        Stack<Integer> stack = new Stack<Integer>();
         stack.push(0);
         int max = 0;
         for (int i = 1; i < h; i++) {

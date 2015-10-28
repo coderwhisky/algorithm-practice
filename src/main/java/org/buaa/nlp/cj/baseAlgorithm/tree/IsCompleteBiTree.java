@@ -13,7 +13,7 @@ public class IsCompleteBiTree {
     public static boolean isCompleteBiTree(BiTreeNode root) {
         boolean ser = true;
 
-        LinkedList<BiTreeNode> queue = new LinkedList<>();
+        LinkedList<BiTreeNode> queue = new LinkedList<BiTreeNode>();
         if (root == null)
             return false;
         queue.offer(root);
@@ -56,7 +56,7 @@ public class IsCompleteBiTree {
 
         System.out.println(isCompleteBiTree(root));
 
-        Set<Integer> sss = new HashSet<>();
+        Set<Integer> sss = new HashSet<Integer>();
         sss.add(33);
     }
 }
