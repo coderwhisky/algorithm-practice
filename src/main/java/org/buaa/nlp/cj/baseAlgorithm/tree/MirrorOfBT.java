@@ -74,7 +74,7 @@ public class MirrorOfBT {
     public static BiTreeNode mirror2(BiTreeNode root) {
         if (root == null)
             return null;
-        Stack<BiTreeNode> stack = new Stack<>();
+        Stack<BiTreeNode> stack = new Stack<BiTreeNode>();
         BiTreeNode p = root;
         stack.push(p);
 

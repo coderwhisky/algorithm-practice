@@ -1,5 +1,7 @@
 package org.buaa.nlp.cj.concurrentprogram.theArtOfJavaCurrencyProgram;
 
+import org.buaa.nlp.cj.designpattern.strategy.StrategyTest;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.locks.Lock;
@@ -9,7 +11,7 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
  * Created by Administrator on 2015/9/24.
  */
 public class _5_16_Cache {
-    static Map<String, Object> map = new HashMap<>();
+    static Map<String, Object> map = new HashMap<String, Object>();
     static ReentrantReadWriteLock rwl = new ReentrantReadWriteLock();
     static Lock r = rwl.readLock();
     static Lock w = rwl.writeLock();

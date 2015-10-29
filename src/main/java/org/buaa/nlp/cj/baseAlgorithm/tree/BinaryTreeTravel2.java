@@ -65,7 +65,7 @@ public class BinaryTreeTravel2 {
      */
     public static void inTravel(BiTreeNode root) {
         BiTreeNode p = root;
-        Stack<BiTreeNode> stack = new Stack<>();
+        Stack<BiTreeNode> stack = new Stack<BiTreeNode>();
         while (p != null || !stack.isEmpty()) {
             while (p != null) {
                 stack.push(p);
@@ -86,7 +86,7 @@ public class BinaryTreeTravel2 {
     public static void postTravel(BiTreeNode root) {
         BiTreeNode p = root;
         BiTreeNode last = null;
-        Stack<BiTreeNode> stack = new Stack<>();
+        Stack<BiTreeNode> stack = new Stack<BiTreeNode>();
         while (p != null) {
             while (p.lchild != null) {
                 stack.push(p);
@@ -110,7 +110,7 @@ public class BinaryTreeTravel2 {
      * @param root
      */
     public static void levelTravel(BiTreeNode root) {
-        LinkedList<BiTreeNode> queue = new LinkedList<>();
+        LinkedList<BiTreeNode> queue = new LinkedList<BiTreeNode>();
 //        queue.offer(root);
         queue.addLast(root);
         BiTreeNode p = null;

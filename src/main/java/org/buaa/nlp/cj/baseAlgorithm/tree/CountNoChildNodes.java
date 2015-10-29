@@ -26,7 +26,7 @@ public class CountNoChildNodes {
 
     public static int noChildNodes(BiTreeNode root) {
         int count = 0;
-        Stack<BiTreeNode> stack = new Stack<>();
+        Stack<BiTreeNode> stack = new Stack<BiTreeNode>();
         BiTreeNode p = root;
         while (p != null || !stack.isEmpty()) {
             while (p != null) {

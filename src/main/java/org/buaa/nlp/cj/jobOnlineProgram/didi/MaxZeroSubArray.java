@@ -19,7 +19,7 @@ public class MaxZeroSubArray {
             num[i] = Integer.valueOf(charArry[i]);
         }
 
-        Map<Integer,Integer> map = new HashMap<>();
+        Map<Integer,Integer> map = new HashMap<Integer,Integer>();
         map.put(0,-1);
         int sum = 0;
         int len = 0;

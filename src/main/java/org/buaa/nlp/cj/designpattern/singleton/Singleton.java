@@ -4,20 +4,20 @@ package org.buaa.nlp.cj.designpattern.singleton;
  * Created by whisky on 15-5-3.
  */
 public class Singleton {
-    // Ë½ÓÐ¹¹Ôì·½·¨£¬·ÀÖ¹±»ÊµÀý»¯
+    // Ë½ï¿½Ð¹ï¿½ï¿½ì·½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¹ï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½
     private Singleton() {}
 
     private static class SingletonFactory {
         private static Singleton instance = new Singleton();
     }
 
-    // »ñÈ¡ÊµÀý
+    // ï¿½ï¿½È¡Êµï¿½ï¿½
     public static Singleton getInstance() {
         return SingletonFactory.instance;
     }
 
-    // Èç¹û¸Ã¶ÔÏó±»ÓÃÓÚÐòÁÐ»¯£¬¿ÉÒÔ±£Ö¤¶ÔÏóÔÚÐòÁÐ»¯Ç°ºó±£³ÖÒ»ÖÂ
-    // ºÎÎªÐòÁÐ»¯£ºÐòÁÐ»¯ÓÃÓÚ¶ÔÏóµÄ³Ö¾Ã»¯£¬¾ÍÊÇ½«¶ÔÏóµÄ×´Ì¬£¨¸÷¸öÊôÐÔÁ¿£©±£´æÆðÀ´£¬È»ºóÔÚÊÊµ±µÄÊ±ºòÔÙ»ñµÃ
+    // ï¿½ï¿½ï¿½ï¿½Ã¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô±ï¿½Ö¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð»ï¿½Ç°ï¿½ó±£³ï¿½Ò»ï¿½ï¿½
+    // ï¿½ï¿½Îªï¿½ï¿½ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð»ï¿½ï¿½ï¿½ï¿½Ú¶ï¿½ï¿½ï¿½Ä³Ö¾Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×´Ì¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È»ï¿½ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½Ù»ï¿½ï¿½
     public Object readResolve() {
         return getInstance();
     }
@@ -26,5 +26,11 @@ public class Singleton {
         Singleton singleton = Singleton.getInstance();
         Singleton singleton1 = Singleton.getInstance();
         Singleton singleton2 = Singleton.getInstance();
+
+        System.out.println(singleton == singleton1);
+
+        System.out.println(singleton);
+        System.out.println(singleton1);
+        System.out.println(singleton2);
     }
 }

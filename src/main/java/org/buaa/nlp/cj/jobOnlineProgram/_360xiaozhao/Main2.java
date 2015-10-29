@@ -34,7 +34,7 @@ public class Main2 {
     }
 
     public List<Integer> primes2(int n) {
-        List<Integer> result = new ArrayList<>();
+        List<Integer> result = new ArrayList<Integer>();
 //        int sqrtn = (int) Math.sqrt(n);
         for (int i = 2; i <= n; i++) {
             if (n % i == 0) {
