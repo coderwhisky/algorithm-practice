@@ -1,4 +1,4 @@
-package org.buaa.nlp.cj.jobOnlineProgram.Indeed;
+package org.buaa.nlp.cj.jobOnlineProgram.Indeed.stage1;
 
 import java.util.Scanner;
 
