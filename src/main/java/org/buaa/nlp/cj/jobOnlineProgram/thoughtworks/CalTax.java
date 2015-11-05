@@ -31,11 +31,16 @@ public class CalTax {
                     double price = extractPrice(line);
                     boolean isImported = isImported(line);
                     boolean isExempt = new GoodsClassify().isExempt(goods);
+                    boolean isCartoonBook = new GoodsClassify().isCartoon(goods);
                     // exempt goods
                     double tax = 0.00;
+                    // cartoon book: isExempt = true, isCartoonBook = true;
                     if (isExempt) {
                         if (isImported) {
 //                            tax = (price * 0.05);
+                            tax = doubleRound(price * 5 / 100);
+                        }
+                        if (isCartoonBook) {
                             tax = doubleRound(price * 5 / 100);
                         }
                     } else {
@@ -146,10 +151,12 @@ public class CalTax {
         String input1 = baseUri + "/src/main/java/org/buaa/nlp/cj/jobOnlineProgram/thoughtworks/input1.txt";
         String input2 = baseUri + "/src/main/java/org/buaa/nlp/cj/jobOnlineProgram/thoughtworks/input2.txt";
         String input3 = baseUri + "/src/main/java/org/buaa/nlp/cj/jobOnlineProgram/thoughtworks/input3.txt";
+        String input4 = baseUri + "/src/main/java/org/buaa/nlp/cj/jobOnlineProgram/thoughtworks/input4.txt";
         List<String> inputList = new ArrayList<String>();
         inputList.add(input1);
         inputList.add(input2);
         inputList.add(input3);
+        inputList.add(input4);
         calTax.calTax(inputList);
 
 //        System.out.println(String.format("%.2f", new CalTax().doubleRound(25.0)));

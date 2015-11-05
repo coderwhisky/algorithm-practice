@@ -69,6 +69,18 @@ public class GoodsClassify {
         return flag;
     }
 
+    public boolean isCartoon(String line) {
+        boolean fla = false;
+        Map<String, String> goodsmap = files2Map();
+        for (Map.Entry<String, String> entry : goodsmap.entrySet()) {
+            if (line.contains(entry.getKey())) {
+                fla = true;
+                break;
+            }
+        }
+        return fla;
+    }
+
     public static void main(String[] args) {
         GoodsClassify goods = new GoodsClassify();
 //        Map<String, String> goodsMap = goods.files2Map();
