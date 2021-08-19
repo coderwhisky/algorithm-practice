@@ -34,9 +34,7 @@ public:
                 nums[i] = tmp;
                 left++;
             } 
-
         }
-        
     }
 };
 // @lc code=end
