@@ -24,7 +24,6 @@ public:
             {'}', '{'},
             {']', '['}
         };
-
         stack<char> cstk;
         for (char ch : s) {
             if (pairs.count(ch)) {
