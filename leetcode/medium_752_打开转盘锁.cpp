@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2022-03-31 07:05:36
+ * @LastEditTime: 2022-04-07 23:07:21
+ * @LastEditors: Please set LastEditors
+ * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @FilePath: /algorithm-practice/leetcode/medium_752_打开转盘锁.cpp
+ */
 
 /*
  * @lc app=leetcode.cn id=752 lang=cpp
